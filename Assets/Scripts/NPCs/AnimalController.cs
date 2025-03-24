@@ -8,13 +8,11 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private float animalSpeed;
     private float lowerBound;
     private bool isOutOfScene;
-    private string foodItEatsName;
 
     // Start is called before the first frame update
     void Start()
     {
         lowerBound = -15f;
-        foodItEatsName = foodItEats.name;
     }
 
     // Update is called once per frame
@@ -45,8 +43,9 @@ public class AnimalController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Food"))
         {
-            Destroy(other.gameObject);
             // Call Scoreboard when finished to add to score.
+            Destroy(other.gameObject);
+            
         }
     }
 }
