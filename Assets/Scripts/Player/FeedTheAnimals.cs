@@ -14,6 +14,7 @@ public class FeedTheAnimals : MonoBehaviour
 {
     [SerializeField] private GameObject food;
     [SerializeField] private float force;
+    [SerializeField] private AudioSource audioSource;
 
     public void OnFeedInput(InputAction.CallbackContext ctx)
     {
@@ -37,6 +38,7 @@ public class FeedTheAnimals : MonoBehaviour
         if (foodRB != null)
         {
             foodRB.AddForce(Vector3.forward * force, ForceMode.Impulse);
+            audioSource.Play();
         }
     }
 }
