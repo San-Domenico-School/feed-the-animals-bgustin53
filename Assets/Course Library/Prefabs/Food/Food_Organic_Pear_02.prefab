@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6412832648184090501}
   - component: {fileID: 4816172970004154958}
   - component: {fileID: 2491813168711448431}
+  - component: {fileID: 5662072753040772949}
   m_Layer: 0
   m_Name: Food_Organic_Pear_02
   m_TagString: Food
@@ -155,3 +156,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.38
   m_Center: {x: 0, y: 0.23322976, z: 0}
+--- !u!114 &5662072753040772949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455b678ec69e740f0b913a76fd0a4cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

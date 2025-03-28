@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1b14718907442abaff9b62f86bbdca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodItEats: {fileID: 0}
+  foodItEats: {fileID: 120208, guid: 4949a22a2c444b0459d7289aae77be28, type: 3}
   animalSpeed: 5
 --- !u!1 &135088
 GameObject:

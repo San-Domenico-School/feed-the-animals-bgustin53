@@ -8,6 +8,7 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private float animalSpeed;
     private float lowerBound;
     private bool isOutOfScene;
+    private bool notHungry;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +40,44 @@ public class AnimalController : MonoBehaviour
         }
     }
 
+    private bool IsFoodItEats(string foodTriggered)
+    {
+        string foodItEatsName = foodItEats.name;
+
+        // Remove "(Clone)" if it exists
+        int cloneIndex = foodTriggered.IndexOf("(Clone)");
+        if (cloneIndex != -1)
+        {
+            foodTriggered = foodTriggered.Substring(0, cloneIndex).Trim();
+        }
+
+        // Compare the cleaned names
+        return foodTriggered.Equals(foodItEatsName);
+
+        // REMOVE RETURN FALSE
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Food"))
+        if(other.gameObject.CompareTag("Food") && !notHungry)
         {
-            // Call Scoreboard when finished to add to score.
+            bool isFoodItEats = IsFoodItEats(other.gameObject.name);
+            if (other.gameObject.name.Equals("Not Picky"))
+            {
+                isFoodItEats = true;
+            }
+
+            if (isFoodItEats)
+            {
+                Debug.Log("AnimalController_69 - Add a point");
+            }
+            else
+            {
+                Debug.Log("AnimalController_73 - Subtract a point");
+            }
+
+            notHungry = true;
             Destroy(other.gameObject);
             
         }
