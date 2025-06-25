@@ -71,10 +71,13 @@ public class AnimalController : MonoBehaviour
             if (isFoodItEats)
             {
                 Debug.Log("AnimalController_69 - Add a point");
+                // Debug from Previous assignment.  Then add in Scoreboard assignment next
+                Scorekeeper.Instance.UpdateScore(1);
             }
             else
             {
                 Debug.Log("AnimalController_73 - Subtract a point");
+                Scorekeeper.Instance.UpdateScore(-1);
             }
 
             notHungry = true;
